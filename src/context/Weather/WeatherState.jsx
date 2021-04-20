@@ -19,15 +19,10 @@ export const useWeather = () => {
   return [state, dispatch];
 };
 
-let apiKey;
-
-if (process.env.NODE_ENV === 'development') {
-  apiKey = process.env.REACT_APP_OPENWEATHERMAP_API_KEY;
-}
-
-if (process.env.NODE_ENV === 'production') {
-  apiKey = process.env.OPENWEATHERMAP_API_KEY;
-}
+let apiKey =
+  process.env.NODE_ENV === 'production'
+    ? process.env.OPENWEATHERMAP_API_KEY
+    : process.env.REACT_APP_OPENWEATHERMAP_API_KEY;
 
 // Action creators
 
