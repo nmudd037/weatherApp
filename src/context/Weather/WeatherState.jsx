@@ -37,7 +37,7 @@ export const getCurrentWeather = async (dispatch, location) => {
     setLoading(dispatch);
 
     const res = await axios.get(
-      `http://api.openweathermap.org/data/2.5/weather?q=${location.city}&units=metric&appid=${apiKey}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${location.city}&units=metric&appid=${apiKey}`
     );
 
     if (res.data.cod === '404' || res.data.cod === '401') {
@@ -56,7 +56,7 @@ export const getForecastWeather = async (dispatch, location) => {
     setLoading(dispatch);
 
     const res = await axios.get(
-      `http://api.openweathermap.org/data/2.5/forecast?q=${location.city}&units=metric&appid=${apiKey}`
+      `https://api.openweathermap.org/data/2.5/forecast?q=${location.city}&units=metric&appid=${apiKey}`
     );
 
     // if (res.data.cod === '404' || res.data.cod === '401') {
