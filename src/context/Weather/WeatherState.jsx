@@ -36,6 +36,7 @@ export const getCurrentWeather = async (dispatch, location) => {
   try {
     setLoading(dispatch);
 
+    console.log(apiKey, process.env.NODE_ENV);
     const res = await axios.get(
       `https://api.openweathermap.org/data/2.5/weather?q=${location.city}&units=metric&appid=${apiKey}`
     );
