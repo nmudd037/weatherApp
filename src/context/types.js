@@ -1,0 +1,6 @@
+export const GET_CURRENT_WEATHER = 'GET_CURRENT_WEATHER';
+export const GET_FORECAST_WEATHER = 'GET_FORECAST_WEATHER';
+export const CLEAR_WEATHER = 'CLEAR_WEATHER';
+export const CLEAR_ERROR = 'CLEAR_ERROR,';
+export const SET_ERROR = 'SET_ERROR';
+export const SET_LOADING = 'SET_LOADING';
