@@ -19,11 +19,12 @@ export const useWeather = () => {
   return [state, dispatch];
 };
 
-let apiKey =
-  process.env.NODE_ENV === 'production'
-    ? process.env.OPENWEATHERMAP_API_KEY
-    : process.env.REACT_APP_OPENWEATHERMAP_API_KEY;
+// let apiKey =
+//   process.env.NODE_ENV === 'production'
+//     ? process.env.OPENWEATHERMAP_API_KEY
+//     : process.env.REACT_APP_OPENWEATHERMAP_API_KEY;
 
+const apiKey = '800fa2005959b310df2d50c4c3ebedbe';
 // Action creators
 
 // Get Current Weather
@@ -31,7 +32,6 @@ export const getCurrentWeather = async (dispatch, location) => {
   try {
     setLoading(dispatch);
 
-    console.log(apiKey, process.env.NODE_ENV);
     const res = await axios.get(
       `https://api.openweathermap.org/data/2.5/weather?q=${location.city}&units=metric&appid=${apiKey}`
     );
